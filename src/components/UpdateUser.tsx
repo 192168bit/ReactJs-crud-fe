@@ -20,7 +20,7 @@ const UpdateUser: React.FC<UpdateUserProps> = ({ userId, onUserUpdated }) => {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const response = await fetch(`http://127.0.0.1:5000/api/users/${user?.id}`);
+        const response = await fetch(`http://127.0.0.1:5000/api/users/${userId}`);
         if (!response.ok) {
           throw new Error('User not found');
         }
